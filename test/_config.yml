@@ -203,6 +203,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-redirect-from
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -211,6 +212,7 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-redirect-from
 
 
 # Archives
@@ -275,6 +277,11 @@ defaults:
       read_time: true
       share: true
       related: true
+      toc : true
+      # toc순서는 markdown header(#) 기준 입니당
+      toc_sticky : true
+      toc_label : Content
+      toc_icon : "fas fa-book-open"
   # _pages
   - scope:
       path: "_pages"
