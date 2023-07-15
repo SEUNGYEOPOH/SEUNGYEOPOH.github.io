@@ -25,7 +25,7 @@ use_math : true
 
 ### 1.1.1 The Basics of Probability
 
-- Sample Space(S) : 확률 실험에서 모든 가능한 결과들의 집합.
+- Sample Space(S, 표본공간) : 확률 실험에서 모든 가능한 결과들의 집합.
 
 - Event(사건, 사상) : Sample Space의 부분집합 
 
@@ -35,7 +35,7 @@ use_math : true
 - $ A $ = {$2, 4, 6$}  
   - 여기서 사건 A가 발생한다는 의미는 2 or 4 or 6 중 하나가 나온다는 것
 - Event의 기본 연산
-  - Union event of A and B : $ A\cup B = \{$w | w \in A or w \in B \}$ 
+  - Union event of A and B : $ A\cup B = \{w | w \in A or w \in B \}$ 
   - Intersection event of A and B :
   - Complementary event of A :
 
