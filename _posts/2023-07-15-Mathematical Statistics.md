@@ -34,9 +34,9 @@ use_math : true
 - $ A $ = {$2, 4, 6$}  
   - 여기서 사건 A가 발생한다는 의미는 2 or 4 or 6 중 하나가 나온다는 것
 - Event의 기본 연산
-  - Union event of A and B : $ A\cup B $ = $\{w | w \in A or w \in B \}$ 
-  - Intersection event of A and B :  $ A\cap B $ = $\{w | w\in A and w\in B \}$ 
-  - Complementary event of A :  $A^{c}$ = $\{w | w\notin A and w\in S\}$
+  - Union event of A and B : $ A\cup B $ = $\{ w | w\in A or w\in B \}$ 
+  - Intersection event of A and B :  $ A\cap B $ = $\{ w | w\in A and w\in B \}$ 
+  - Complementary event of A :  $A^{c}$ = $\{ w | w\notin A and w\in S \}$
 
 ### 1.1.2 Calculation of probability
 
