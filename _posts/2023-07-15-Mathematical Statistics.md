@@ -1,5 +1,5 @@
 ---
-title:  "Test LaTeX"
+title:  "Probability and probability distribution"
 categories : Math
 tag : Mathematical Statistics
 # 복수로 하려면 [Python, Blog]처럼 리스트 형태로 할당
@@ -21,8 +21,6 @@ use_math : true
 
 # 1. Probability and probability distribution
 
-
-
 ##  1.1 Probability
 
 ### 1.1.1 The Basics of Probability
@@ -31,7 +29,15 @@ use_math : true
 
 - Event(사건, 사상) : Sample Space의 부분집합 
 
-[Ex. 1-1] 
+[Ex. 1-1]  주사위 1개를 던진다고 가정하고 Sample Space를 S, 짝수가 나오는 Event를 A라고 정의할 때,
+
+- $ S $ = {$1, 2, 3, 4, 5, 6$} 
+- $ A $ = {$2, 4, 6$}  
+  - 여기서 사건 A가 발생한다는 의미는 2 or 4 or 6 중 하나가 나온다는 것
+- Event의 기본 연산
+  - Union event of A and B : $ A\cup B$ = {$w | w \in A or w \in B $} 
+  - Intersection event of A and B :
+  - Complementary event of A :
 
 ### 1.1.2 Calculation of probability
 
