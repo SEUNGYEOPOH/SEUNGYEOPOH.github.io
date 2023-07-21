@@ -1,5 +1,5 @@
 ---
-title:  "Probability and probability distribution"
+title:  "Chap.1 Probability and probability distribution"
 categories : Math
 tag : Mathematical Statistics
 # 복수로 하려면 [Python, Blog]처럼 리스트 형태로 할당
@@ -31,16 +31,12 @@ use_math : true
 
 - Elementary Event(근원사건) : Event 중 한 개의 원소로 이루어진 Event 
 
-[Ex. 1-1]  주사위 1개를 던진다고 가정하고 Sample Space를 S, 짝수가 나오는 Event를 A라고 정의할 때,
-- $ S $ = {$1, 2, 3, 4, 5, 6$} 
-- $ A $ = {$2, 4, 6$}  
-  - 여기서 사건 A가 발생한다는 의미는 2 or 4 or 6 중 하나가 나온다는 것
+- Probability는 사건이 일어날 가능성을 나타내는 Mathematical Measure
+
 - Event의 기본 연산
   - Union event of A and B : $A\cup B$  = {$\{ w \,\vert\, w\in A \text{ or } w\in B\}$}
   - Intersection event of A and B : $A\cap B$  = {$\{ w \,\vert\, w\in A \text{ and } w\in B\}$}
   - Complementary event of A : $A^{c}$  = {$\{ w \,\vert\, w\notin A \text{ and } w\in S\}$}
-
-- Probability는 사건이 일어날 가능성을 나타내는 Mathematical Measure
 
 **[Definition 1-1] Classical definition of probability(Laplace)** <br/>
 
@@ -54,14 +50,6 @@ P[A] = \frac{k}{n}
 
 \\[
 P[A] = \frac{n(A)}{n(S)}
-\\]
-
-[Ex 1-2] 주사위 1개를 던질 때, 짝수가 나올 확률
-- $ S $ = {$1, 2, 3, 4, 5, 6$}, $n(S) = 6$
-- $ A $ = {$2, 4, 6$}, $n(A) = 3$ <br/>
-
-\\[
-  \therefore P[A] = \frac{1}{2}
 \\]
 
 
@@ -107,56 +95,46 @@ P[A] = \frac{n(A)}{n(S)}
   \text{(2)     } P \left [A\cup B  \right ] = P[A] + P[A] - P[A \cap B]
 \\]
 
-[Ex 1-3] Coin을 2번 던져 H, T가 나오는 실험
-\\[
-  S = {(H,H), (H,T), (T,H), (T,T)}  
-\\]
-
-여기서 A를 ${(H,H),(H,T)}$ B를 ${(H,H),(T,H)}$라고 가정했을 때, $P[A \cup B]$는?
-\\[
-  A \cap B = (H,H)
-\\]
-
-\\[
-  P[A \cap B] = \frac{1}{4}
-\\]
-Rule 1-2.(2)에 의해 $P \left [A\cup B  \right ] = P[A] + P[A] - P[A \cap B]$
-\\[
-  \therefore P[A \cup B] = \frac{1}{2} + \frac{1}{2} - \frac{1}{4} = \frac{3}{4}
-\\]
-
 ### 1.1.3 Conditional Probability and Independent Events
 **[Definition 1-4] Conditional probability(조건부확률)**<br/>
 - event A에 대해 B의 Conditional probability는 아래와 같다.<br/>
 \\[
   P \left\[ B \,\vert\, A  \right\] = \frac{P[A \cap B]}{P[A]}, \text{ (s.t. } P[A]>0 \text{)}
 \\]
-- Conditional probability의 의미
-  - event A가 발생했다면 A이외에는 <U>일어날 수 없다.</U> 따라서 이런 조건하에 A가 새로운 sample space 되고, **A내에서 $A \cap B$에 있는 sample point(element)가 발생할 때 B가 일어나게 된다.**
-  - 그러므로 A하에서 B의 Conditional probability는 $P[A \cap B]$와 $P[A]$의 비로 표현된다.
 
-[Ex 1-4] 어느 대학 코딩테스트 대회에 참가한 30명의 학생 중 문제를 모두 풀어낸 학생과 다 풀지 못한 학생의 수는 아래와 같다.
-
-
-|구분|남학생|여학생|
-|:---:|:---:|:---:|
-|다 푼 사람|12|11|
-|다 못 푼 사람|3|4|
-
-
-참가한 학생 중 임의로 선택한 학생이 남성이었을 때, 이 학생이 문제를 모두 풀어낼 확률을 구하라.
-
-- 모두 푼 event를 A, 남성일 경우를 B라고 가정
-- $P \left\[ B \,\vert\, A  \right\] = \frac{P[A \cap B]}{P[A]}$
-- $ n(A \cap B) = 12$, $n(B) = 15$ <br/>
-
++ Multiplication theorem(승법공식)
 \\[
-  \therefore P \left\[ B \,\vert\, A  \right\] = \frac{12}{15} = \frac{4}{5}
+  P[A \cap B] = P \left\[ B \,\vert\, A  \right\]P[A] = P \left\[ A \,\vert\, B  \right\]P[B]
 \\]
 
-#### Example.
+- Conditional probability의 의미
+  - event A가 발생했다면 A이외에는 <U>일어날 수 없다.</U> 
+  - 따라서 이런 조건하에 A가 새로운 sample space 되고, **A내에서 $A \cap B$에 있는 sample point(element)가 발생할 때 B가 일어나게 된다.**
+  - 그러므로 A하에서 B의 Conditional probability는 $P[A \cap B]$와 $P[A]$의 비로 표현된다.
+
+**[Rule. 1-3] total probability theorem(전확률 공식)**
+- $A_1, \cdots, A_n$이 sample space S의 한 분할일 때, 임의의 사건 B에 대하여 다음이 성립한다.
+\\[
+  P[B] = P \left\[ B \,\vert\, A_1  \right\]P[A] + \cdots + P \left\[ B \,\vert\, A_n  \right\]P[A_n] 
+\\]
+- 분할이란 $A_1, \cdots, A_n$이 아래의 조건을 만족할 때, $A_1 \cdots, A_n$을 S의 분할이라고 말함.<br/>
+(i)$A_i \cap A_j = \emptyset, i \neq j$<br/>
+(ii)$A_1 \cup \cdots \cup A_n = S$<br/>
 
 
+**[Rule. 1-4] Bayes' theorem**
+- $A_1, \cdots, A_n$이 sample space S의 한 분할이고, 각 i에 대해 $P[A_i] > 0$이며 $P[B] > 0$ 일 때 다음 등식이 성립한다.
+\\[
+  P \left\[ A_k \,\vert\, B  \right\] = \frac{P \left\[ B \,\vert\, A_k  \right\]P[A_k]}{ \sum_{i=1}^{n}P\left [B \,\vert\, A_i  \right ]P[A_i]}
+\\]
+- **[Bayes' theorem] 증명**
+\\[
+\begin{aligned}
+P \left\[ A_k \,\vert\, B  \right\] &= \frac{P[A_k \cap B]}{P[B]} \\\\\\
+&=\frac{P \left\[ B \,\vert\, A_k  \right\]P[A_k]}{P[B]} \text{  (multiplication theorem)}  \\\\\\
+&=\frac{P \left\[ B \,\vert\, A_k  \right\]P[A_k]}{\sum_{i=1}^{n}P\left [B \,\vert\, A_i  \right ]P[A_i]} \text{  (total probability theorem)}
+\end{aligned}
+\\]
 
 ## 1.2 Random variables and probability distributions
 
@@ -165,10 +143,6 @@ Rule 1-2.(2)에 의해 $P \left [A\cup B  \right ] = P[A] + P[A] - P[A \cap B]$
 
 
 ### 1.2.2 Probability distributions
-
-
-
-#### Example.
 
 ## 1.3 Expected value and moment
 
@@ -182,9 +156,6 @@ Rule 1-2.(2)에 의해 $P \left [A\cup B  \right ] = P[A] + P[A] - P[A \cap B]$
 
 ### 1.1.3 Moment generating function
 
-
-
-#### Example.
 
 ## 1.4 Multidimensional distribution
 
@@ -202,6 +173,3 @@ Rule 1-2.(2)에 의해 $P \left [A\cup B  \right ] = P[A] + P[A] - P[A \cap B]$
 
 ### 1.4.4 Linear Combination of Random Variables
 
-
-
-#### Example.
