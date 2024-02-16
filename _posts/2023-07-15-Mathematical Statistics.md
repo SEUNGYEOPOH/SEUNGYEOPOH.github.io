@@ -136,7 +136,7 @@ P \left\[ A_k \,\vert\, B  \right\] &= \frac{P[A_k \cap B]}{P[B]} \\\\\\
 \end{aligned}
 \\]
 
-## 1.2 Random variables and probability distributions
+<!-- ## 1.2 Random variables and probability distributions
 
 ### 1.2.1 Random variables
 
@@ -171,5 +171,5 @@ P \left\[ A_k \,\vert\, B  \right\] &= \frac{P[A_k \cap B]}{P[B]} \\\\\\
 
 
 
-### 1.4.4 Linear Combination of Random Variables
+### 1.4.4 Linear Combination of Random Variables -->
 
