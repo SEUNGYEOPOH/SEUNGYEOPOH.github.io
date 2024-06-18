@@ -1,5 +1,5 @@
 ---
-title:  "Brute Force 1"
+title:  "Brute Force"
 categories : Algorithm
 tag : Brute Force
 # 복수로 하려면 [Python, Blog]처럼 리스트 형태로 할당
