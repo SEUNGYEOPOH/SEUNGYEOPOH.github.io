@@ -12,7 +12,7 @@ author_profile : false
 use_math : true
 ---
 
-# Breadth-First Search
+# Breadth First Search
 
 ## 1. What is Breadth-First Search?
 - Graph Search

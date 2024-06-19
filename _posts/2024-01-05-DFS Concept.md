@@ -75,5 +75,3 @@ print(state) # 방문된 노드 출력
 ```
 
 
-### Result
-
